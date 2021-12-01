@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="" />
+    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../company-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../company-microservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../company-microservice/src/main/java/company_microservice/company/security/JwtTokenAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../company-microservice/src/main/java/company_microservice/company/security/JwtTokenAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../company-microservice/src/main/java/company_microservice/company/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../company-microservice/src/main/java/company_microservice/company/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
