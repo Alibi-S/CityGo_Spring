@@ -1,0 +1,115 @@
+html{
+	overflow-x: hidden;
+}
+#parralax-image {
+	height: 500px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1{
+	font-family: sans-serif;
+	color: white;
+
+}
+
+h1, h2, h3, h4, p{
+	cursor: default;	
+}
+
+#about, #timer_, #task {
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* ВЫДЕЛЕНИЕ
+
+-ms-user-select — эксплорер;
+
+-moz-user-select — файрфокс;
+
+-khtml-user-select — конкверор;
+
+-webkit-user-select — вебкит браузеры (Хром, Сафари);
+
+user-select — для браузеров последних версий.
+*/
+#about {
+	padding: 50px 0px;
+}
+
+#sponsor a, h1 {
+	color: black;
+}
+
+#sponsor a:hover {
+	color: #fbff17; /*наш желтый*/
+}
+
+.footer {
+    margin-top:40px;
+    position:relative
+}
+
+.footer .container {
+    padding:60px 0 20px;
+}
+
+.footer ul {
+    margin:0 auto;
+    margin-bottom:30px;
+    margin-top:10px;
+    text-align:center;
+    list-style-type:none;
+    padding-left:0;
+}
+
+.footer ul li {
+	text-align:center;
+    display:inline-block;
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+    line-height:45px;
+    margin:0 4px;
+    width:45px!important;
+    height:45px!important;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+
+.footer ul li:hover{
+    background: #fbff17;
+}
+
+.footer ul li:hover	a {
+    color:blue;
+}
+
+.footer ul li a {
+    color:#fff;
+    width:42px!important;
+    height:42px!important;
+}
+
+.footer ul li a i {
+    line-height:45px;
+    color:#fff;
+}
+
+.footer p {
+    color:#fff;
+    font-size:.9em;
+    line-height:24px;
+    font-weight:300;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+#footer a,#footer a:hover {
+    color: #fbff17;
+}
+
