@@ -7,17 +7,9 @@
     <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/model/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/model/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/indexx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/indexx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/MainPageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/model/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/model/Log.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logging-api/src/main/java/com/example/loggingapi/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logging-api/src/main/java/com/example/loggingapi/controller/LogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logging-api/target/classes/com/example/loggingapi/controller/LogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../logging-api/target/classes/com/example/loggingapi/controller/LogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminpage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +86,7 @@
       <workItem from="1638365033025" duration="690000" />
       <workItem from="1638366536117" duration="297000" />
       <workItem from="1638379892245" duration="5039000" />
-      <workItem from="1638456544270" duration="14634000" />
+      <workItem from="1638456544270" duration="21550000" />
     </task>
     <servers />
   </component>

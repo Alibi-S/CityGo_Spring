@@ -44,13 +44,9 @@ public class IndexController {
     @GetMapping("/admin")
     public String admin(Model model) {
 //        LogListDTO logList = restTemplate.getForObject("http://logging-api/logs/dto", LogListDTO.class);
-
         LogListDTO logList = restTemplate.getForObject("http://zuul-service/logs/dto", LogListDTO.class);
-
-
         System.out.println(logList.getLogs().toString());
-
-        model.addAttribute(logList.getLogs());
+        model.addAttribute("logs", logList.getLogs());
 
         return "adminpage";
     }

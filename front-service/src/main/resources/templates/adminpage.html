@@ -174,36 +174,105 @@
         </div>
     </div>
 
-    <section id="admin_form" class="container">
-        <div class="row">
-            <form method="post" enctype="multipart/form-data">
-                
-                <div class="form-group">
-                    <label for="riddle">Riddle</label>
-                    <input class="form-control" id="riddle" type="text" name="riddle">
-                </div>
+<!--    <section id="admin_form" class="container">-->
+<!--        <div class="row">-->
+<!--            <form method="post" enctype="multipart/form-data">-->
+<!--                -->
+<!--                <div class="form-group">-->
+<!--                    <label for="riddle">Riddle</label>-->
+<!--                    <input class="form-control" id="riddle" type="text" name="riddle">-->
+<!--                </div>-->
 
-                <div class="form-group">                
-                    <label for="spon">Sponsor</label>
-                    <input class="form-control" id="spon" type="text" name="sponsor">
-                    <input type="file" class="form-control-file"  name="sponsorimage">
-                </div>
-
-
-                <div class="form-group">
-                    <label for="priz">Prize</label>
-                    <input class="form-control" id="priz" type="text" name="prize">
-                    <input type="file" class="form-control-file"  name="prizeimage">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </section>
+<!--                <div class="form-group">                -->
+<!--                    <label for="spon">Sponsor</label>-->
+<!--                    <input class="form-control" id="spon" type="text" name="sponsor">-->
+<!--                    <input type="file" class="form-control-file"  name="sponsorimage">-->
+<!--                </div>-->
 
 
-    <p th:text="${logList}"></p>
+<!--                <div class="form-group">-->
+<!--                    <label for="priz">Prize</label>-->
+<!--                    <input class="form-control" id="priz" type="text" name="prize">-->
+<!--                    <input type="file" class="form-control-file"  name="prizeimage">-->
+<!--                </div>-->
 
+<!--                <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+<!--    <p th:text="${logList}"></p>-->
+
+<!--    <tr th:each="student: ${students}">-->
+<!--        <td th:text="${student.id}" />-->
+<!--        <td th:text="${student.name}" />-->
+<!--    </tr>-->
+
+<!--    <table class="table">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th scope="col">#</th>-->
+<!--            <th scope="col">First</th>-->
+<!--            <th scope="col">Last</th>-->
+<!--            <th scope="col">Handle</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <th scope="row">1</th>-->
+<!--            <td>Mark</td>-->
+<!--            <td>Otto</td>-->
+<!--            <td>@mdo</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th scope="row">2</th>-->
+<!--            <td>Jacob</td>-->
+<!--            <td>Thornton</td>-->
+<!--            <td>@fat</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th scope="row">3</th>-->
+<!--            <td colspan="2">Larry the Bird</td>-->
+<!--            <td>@twitter</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+
+
+
+
+    <!--    private long id;-->
+    <!--    private long userId;-->
+    <!--    private String service;-->
+    <!--    private String action;-->
+    <!--    private String description;-->
+    <div class="container">
+        <h2>Log table</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">userId</th>
+                    <th scope="col">service</th>
+                    <th scope="col">action</th>
+                    <th scope="col">description</th>
+        <!--            <th scope="col">Handle</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="log, state : ${logs}"
+                    class="" th:classappend="${state.odd} ? 'odd-row' : 'even-row'">
+    <!--                <td th:utext="${state.count}" scope="row"/>-->
+                    <th th:utext="${log.id}" scope="row"/>
+                    <td th:utext="${log.userId}"/>
+                    <td th:utext="${log.service}"/>
+                    <td th:utext="${log.action}"/>
+                    <td th:utext="${log.description}"/>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <section class="footer bg-primary" id="footer">
         <div class="container">
