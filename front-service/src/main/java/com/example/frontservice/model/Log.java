@@ -9,6 +9,8 @@ import lombok.*;
 @Setter
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Log {
     private long id;
     private long userId;

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" th:href="@{style/style.css}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Authorization</title>
+
+
+    <style>
+        html{
+            overflow-x: hidden;
+        }
+        #parralax-image {
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-family: sans-serif;
+            color: white;
+
+        }
+
+        h1, h2, h3, h4, p{
+            cursor: default;
+        }
+
+        #about, #timer_, #task {
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* ВЫДЕЛЕНИЕ
+
+        -ms-user-select — эксплорер;
+
+        -moz-user-select — файрфокс;
+
+        -khtml-user-select — конкверор;
+
+        -webkit-user-select — вебкит браузеры (Хром, Сафари);
+
+        user-select — для браузеров последних версий.
+        */
+
+        #about {
+            padding: 50px 0px;
+        }
+
+        #sponsor a, h1 {
+            color: black;
+        }
+
+        #sponsor a:hover {
+            color: #fbff17; /*наш желтый*/
+        }
+
+        .footer {
+            margin-top:40px;
+            position:relative
+        }
+
+        .footer .container {
+            padding:60px 0 20px;
+        }
+
+        .footer ul {
+            margin:0 auto;
+            margin-bottom:30px;
+            margin-top:10px;
+            text-align:center;
+            list-style-type:none;
+            padding-left:0;
+        }
+
+        .footer ul li {
+            text-align:center;
+            display:inline-block;
+            background:rgba(0,0,0,0.2);
+            color:#fff;
+            line-height:45px;
+            margin:0 4px;
+            width:45px!important;
+            height:45px!important;
+            -webkit-border-radius:3px;
+            border-radius:3px;
+        }
+
+        .footer ul li:hover{
+            background: #fbff17;
+        }
+
+        .footer ul li:hover	a {
+            color:blue;
+        }
+
+        .footer ul li a {
+            color:#fff;
+            width:42px!important;
+            height:42px!important;
+        }
+
+        .footer ul li a i {
+            line-height:45px;
+            color:#fff;
+        }
+
+        .footer p {
+            color:#fff;
+            font-size:.9em;
+            line-height:24px;
+            font-weight:300;
+            text-align:center;
+            text-transform:uppercase;
+        }
+
+        #footer a,#footer a:hover {
+            color: #fbff17;
+        }
+    </style>
+</head>
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="indexxxxxx.mustache">CityGO</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="indexxxxxx.mustache">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">USERNAME</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link " href="#" >My raiting</a>
+                </li> -->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a href="/login" class="btn btn-outline-light my-2 my-sm-0">Log in/out</a>
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" id="task" style="background-color: #fbff17;">
+        <div class="container" style="text-align: center;">
+            <h1 class="display-4" style="color: black;">Ready to get to know amazing Almaty better?)</h1>
+            <h2>If so, come in soon! The city is waiting for its heroes!!!</h2>
+        </div>
+    </div>
+
+
+
+    <section id="reg_form" class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nickname</label>
+                    <input id="exampleInputEmail1" class="form-control form-control-lg" type="text" placeholder="tourist_ala">
+                    <small id="emailHelp" class="form-text text-muted">Vidno vsem</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+
+
+                    <a href="" class="btn btn-outline-light btn-primary my-2 my-sm-0">Create an account</a>
+                    <a href="/autorization" class="btn btn-outline-light btn-primary my-2 my-sm-0">I forgot password/nickname</a>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
+        </div>
+
+    </section>
+
+
+    <section class="footer bg-primary" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul>
+                        <li><a href="https://vk.com"><i class="fa fa-vk"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://whatsapp.com"><i class="fa fa-whatsapp"></i></a></li>
+                    </ul>
+                    <p>CityGo.Almaty.kz<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

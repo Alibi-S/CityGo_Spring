@@ -13,6 +13,125 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>CityGo Almaty</title>
 
+    <style>
+        html{
+            overflow-x: hidden;
+        }
+        #parralax-image {
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-family: sans-serif;
+            color: white;
+
+        }
+
+        h1, h2, h3, h4, p{
+            cursor: default;
+        }
+
+        #about, #timer_, #task {
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* ВЫДЕЛЕНИЕ
+
+        -ms-user-select — эксплорер;
+
+        -moz-user-select — файрфокс;
+
+        -khtml-user-select — конкверор;
+
+        -webkit-user-select — вебкит браузеры (Хром, Сафари);
+
+        user-select — для браузеров последних версий.
+        */
+        #about {
+            padding: 50px 0px;
+        }
+
+        #sponsor a, h1 {
+            color: black;
+        }
+
+        #sponsor a:hover {
+            color: #fbff17; /*наш желтый*/
+        }
+
+        .footer {
+            margin-top:40px;
+            position:relative
+        }
+
+        .footer .container {
+            padding:60px 0 20px;
+        }
+
+        .footer ul {
+            margin:0 auto;
+            margin-bottom:30px;
+            margin-top:10px;
+            text-align:center;
+            list-style-type:none;
+            padding-left:0;
+        }
+
+        .footer ul li {
+            text-align:center;
+            display:inline-block;
+            background:rgba(0,0,0,0.2);
+            color:#fff;
+            line-height:45px;
+            margin:0 4px;
+            width:45px!important;
+            height:45px!important;
+            -webkit-border-radius:3px;
+            border-radius:3px;
+        }
+
+        .footer ul li:hover{
+            background: #fbff17;
+        }
+
+        .footer ul li:hover	a {
+            color:blue;
+        }
+
+        .footer ul li a {
+            color:#fff;
+            width:42px!important;
+            height:42px!important;
+        }
+
+        .footer ul li a i {
+            line-height:45px;
+            color:#fff;
+        }
+
+        .footer p {
+            color:#fff;
+            font-size:.9em;
+            line-height:24px;
+            font-weight:300;
+            text-align:center;
+            text-transform:uppercase;
+        }
+
+        #footer a,#footer a:hover {
+            color: #fbff17;
+        }
+
+
+    </style>
+
     <script type="text/javascript">
 
         function countdown(dateEnd) {
@@ -80,7 +199,7 @@
         <a class="navbar-brand" href="indexxxxxx.mustache">CityGO</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="indexxxxxx.mustache">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="indexxxxxx.mustache">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">USERNAME</a>
@@ -90,7 +209,7 @@
             </li> -->
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <a href="autorization.html" class="btn btn-outline-light my-2 my-sm-0">Log in/out</a>
+            <a href="/login" class="btn btn-outline-light my-2 my-sm-0">Log in/out</a>
         </form>
     </div>
 </nav>
@@ -100,7 +219,7 @@
 url('static/img/Hotel_Qazaqstan_zakat.webp')
 -->
 <section id="timer_">
-    <header id="parralax-image" style="background-image:url('static/img/Hotel_Qazaqstan_zakat.webp');">
+    <header id="parralax-image" style="background-image:url('https://i.pinimg.com/originals/37/1a/dd/371add26eac8fce1b5c8073f79a4f545.jpg');">
         <div class="row h-100">
             <div class="col-md-12 align-self-center countdown">
                 <h1 class="text-center display-2 timer">
@@ -114,6 +233,155 @@ url('static/img/Hotel_Qazaqstan_zakat.webp')
     </header>
 </section>
 
+
+<section id="about" class="container" style="text-align: center;">
+    <div class="row">
+        <h1 class="col-12 display-2" style="color: black;">CityGO</h1>
+        <h3 class="col-12 display-4">Almaty</h3>
+        <h4 class="col-12">CityGO - is the site with the coolest challenges and prizes! Mysteries are provided here, the answer to which will be various sights, buildings, parks and other places of our big city. Solve the riddle, Find this place, Take a picture there, Get a cool prize from our Generous Sponsors! Go to know Almaty with us !!!</h4>
+    </div>
+</section>
+
+<section id="second_parallax">
+    <header id="parralax-image" style="background-image: url('https://qazaqtimes.com/content/uploads/2019/12/2017.jpg');">
+        </div>
+    </header>
+</section>
+
+<div class="jumbotron jumbotron-fluid" id="task" style="background-color: #fbff17;">
+    <div class="container" style="text-align: center;">
+        <h1 class="display-4" style="color: black;">Task</h1>
+        <h3>A 6-meter warrior has been guarding a big city for 24 years. What is it about?</h3>
+        <a href="#answer" class="btn btn-primary" data-toggle="tooltip" title="What are you waiting for?" style="min-width: 100px;margin-top: 10px;">GO</a>
+    </div>
+</div>
+
+<section id="sponsor" class="container" style="text-align: center;">
+    <div class="row" style="">
+        <div class="col-sm-12 col-md-6 bg rounded-left rounded-lg" style="padding: 25px; background-color: #14F4A9;">
+            <img src="img/glovo.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Sponsor logo">
+
+            <h1>This week's sponsor is <a href="" class="alert-link">Glovo.kz</a></h1>
+        </div>
+        <div class="col-sm-12 col-md-6 bg- rounded-lg" style="padding: 25px; background-color: #20CAFA;">
+            <img src="img/pizza2.jpg" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Prize">
+
+            <h1>Two pizzas for every taste for free!!!</h1>
+
+        </div>
+        <div class="col-12 rounded-lg" style="text-align: center; padding: 20px 0px;">
+            <a class="btn btn-primary" href="#answer" role="button" style="min-width: 100px; color: white;">I want to get a prize</a>
+        </div>
+    </div>
+</section>
+
+<section id="par3">
+    <header id="parralax-image" style="background-image: url('img/night_oblaka.jpg');">
+        <div class="row h-100">
+            <div class="col-md-12 align-self-center">
+            </div>
+        </div>
+    </header>
+</section>
+
+<section class="container">
+    <div class="col-12" style="margin: 35px 0px; text-align: center;">
+        <h2 class="display-4">Last week's winners</h2>
+    </div>
+    <table class="table">
+        <thead class="thead" style="background-color: #fbff17">
+        <tr>
+            <th scope="col"><h2>№</h2></th>
+            <th scope="col"><h2>Nickname</h2></th>
+            <th scope="col"><h2>Rating</h2></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="background-color: #14F4A9;">
+            <th scope="row"><h4>1</h4></th>
+            <td><h4>Ros9</h4></td>
+            <td><h4>43</h4></td>
+        </tr>
+        <tr style="background-color: #20CAFA;">
+            <th scope="row"><h4>2</h4></th>
+            <td><h4>Aqsaqal</h4></td>
+            <td><h4>32</h4></td>
+        </tr>
+        <tr style="background-color: #14F4A9">
+            <th scope="row"><h4>3</h4></th>
+            <td><h4>Kokoro</h4></td>
+            <td><h4>12</h4></td>
+        </tr>
+        <tr style="background-color: #20CAFA;">
+            <th scope="row"><h4>4</h4></th>
+            <td><h4>Tourist</h4></td>
+            <td><h4>1213</h4></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="container">
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="2500">
+                <img th:src="@{img/fon_ata.jpg}" class="img-fluid img-thumbnail mx-auto d-block w-100" alt="Ata1">
+            </div>
+            <div class="carousel-item" data-interval="2500">
+                <img th:src="@{img/zagadka_img.jpg}" class="img-fluid img-thumbnail mx-auto d-block w-100" alt="Ata2">
+            </div>
+            <div class="carousel-item" data-interval="2500">
+                <img th:src="@{img/perv.jpg}" class="img-fluid img-thumbnail mx-auto d-block w-100"  alt="Ata3">
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+
+<div class="jumbotron jumbotron-fluid" id="answer" style="background-color: #fbff17; margin-top: 30px;">
+    <div class="container" style="">
+        <form>
+            <h1>You know the answer? So what are you waiting for?</h1>
+            <div class="form-group">
+                <input class="form-control form-control-lg" type="text" placeholder="Arbat">
+            </div>
+            <div class="form-group">
+                <label for="fotka"><h2>Throw a picture from the place to get a prize! :)</h2></label>
+                <input type="file" class="form-control-file" id="fotka">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<section class="footer bg-primary" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul>
+                    <li><a href="https://vk.com"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://whatsapp.com"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+                <p>CityGo.Almaty.kz<br></p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
