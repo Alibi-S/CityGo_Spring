@@ -3,6 +3,7 @@ package company_microservice.company.service;
 import company_microservice.company.DAO.CompanyDAO;
 import company_microservice.company.model.Company;
 import company_microservice.company.model.Log;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
@@ -19,11 +20,18 @@ public class CompanyService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    AmqpTemplate amqpTemplate;
+
     public void createLog(Long userId, String action, String description){
         Log log = new Log(userId, "CompanyService", action, description);
         HttpEntity<Log> request = new HttpEntity<>(log);
         restTemplate.postForObject("http://logging-api/logs", request, Log.class);
         System.out.println(log.toString());
+
+//        amqpTemplate.convertAndSend("queue1", "Log from company-service");
+        String logForAmqp = log.getUserId() + " " + log.getService() + " " + log.getAction() + " " + log.getDescription();
+        amqpTemplate.convertAndSend("queue1", logForAmqp);
     }
 
 
