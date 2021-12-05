@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="" />
+    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/model/DTO/ChallengeListDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/controller/ChallengeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/controller/ChallengeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/service/ChallengeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/service/ChallengeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminpage.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +60,10 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ALIBI\IdeaProjects\CityGo_JavaSpring\CityGo_Spring\front-service\src\main\resources\static\" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.frontservice.model.DTO" />
+      <recent name="com.example.frontservice.model" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.FrontServiceApplication">
     <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
@@ -81,7 +94,7 @@
       <workItem from="1638366536117" duration="297000" />
       <workItem from="1638379892245" duration="5039000" />
       <workItem from="1638456544270" duration="21550000" />
-      <workItem from="1638716033966" duration="606000" />
+      <workItem from="1638716033966" duration="13235000" />
     </task>
     <servers />
   </component>

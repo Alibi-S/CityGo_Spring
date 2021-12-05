@@ -2,6 +2,7 @@ package com.example.challengesapi.controller;
 
 import com.example.challengesapi.model.Challenge;
 import com.example.challengesapi.model.DTO.ChallengeCompanyDTO;
+import com.example.challengesapi.model.DTO.ChallengeListDTO;
 import com.example.challengesapi.model.Log;
 import com.example.challengesapi.service.ChallengeService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -38,6 +39,11 @@ public class ChallengeController {
     @GetMapping("")
     public List<Challenge> getAllChallenges() {
         return service.getChallengeList();
+    }
+
+    @GetMapping("/dto")
+    public ChallengeListDTO getAllChallengesDto() {
+        return service.getChallengeListDto();
     }
 
     @GetMapping("/{id}")

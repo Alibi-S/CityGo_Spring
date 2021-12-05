@@ -1,12 +1,18 @@
 package com.example.frontservice.controller;
 
 
+import com.example.frontservice.model.Challenge;
+import com.example.frontservice.model.DTO.ChallengeListDTO;
 import com.example.frontservice.model.DTO.LogListDTO;
 import com.example.frontservice.model.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -47,6 +53,23 @@ public class IndexController {
         LogListDTO logList = restTemplate.getForObject("http://zuul-service/logs/dto", LogListDTO.class);
         System.out.println(logList.getLogs().toString());
         model.addAttribute("logs", logList.getLogs());
+
+        return "adminpage";
+    }
+
+    @GetMapping("/admin_challenges")
+    public String challengeAdmin(Model model) {
+        ChallengeListDTO challengeListDTO = restTemplate.getForObject("http://zuul-service/challenges/dto", ChallengeListDTO.class);
+        model.addAttribute("challenges", challengeListDTO.getChallengeList());
+        return "challenges_admin";
+    }
+
+    @PostMapping("/admin_challenges")
+    public String createChallenge(@ModelAttribute Challenge challenge, BindingResult bindingResult, Model model) {
+
+        System.out.println(challenge.toString());
+        HttpEntity<Challenge> request = new HttpEntity<>(challenge);
+        restTemplate.postForObject("http://zuul-service/challenges/register", request, Challenge.class);
 
         return "adminpage";
     }

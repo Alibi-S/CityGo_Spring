@@ -4,6 +4,7 @@ import com.example.challengesapi.dao.ChallengeDAO;
 import com.example.challengesapi.model.Challenge;
 import com.example.challengesapi.model.Company;
 import com.example.challengesapi.model.DTO.ChallengeCompanyDTO;
+import com.example.challengesapi.model.DTO.ChallengeListDTO;
 import com.example.challengesapi.model.Log;
 //import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 //import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
@@ -14,6 +15,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -104,5 +106,12 @@ public class ChallengeService {
     public Optional<Challenge> getChallenge(Long id) {
         createLog(1L, "GET", "Get Challenge by id: " + id);
         return challengeDAO.findById(id);
+    }
+
+    public ChallengeListDTO getChallengeListDto() {
+        ArrayList<Challenge> challenges = (ArrayList<Challenge>) challengeDAO.findAll();
+
+        ChallengeListDTO challengeListDTO = new ChallengeListDTO(challenges);
+        return  challengeListDTO;
     }
 }
