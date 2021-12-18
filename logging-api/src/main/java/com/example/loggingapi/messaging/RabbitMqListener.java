@@ -28,7 +28,7 @@ public class RabbitMqListener {
         System.out.println("Splited2: " + splited[2]);
         System.out.println("Splited3: " + splited[3]);
 
-        if (splited[3].equals("Created")) {
+        if (splited[3].equals("Created") || splited[3].equals("Send_message")) {
             //message.split("\\W+")
             String descr = splited[3] + message.substring(message.indexOf(": "));
             log.setDescription(descr);
