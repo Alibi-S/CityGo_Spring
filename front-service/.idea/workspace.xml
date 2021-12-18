@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/service/ChallengeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/service/ChallengeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/challenges_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/challenges_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/indexxxxxx.mustache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adminpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/challenges_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/challenges_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/indexxxxxx.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logging-api/src/main/java/com/example/loggingapi/messaging/RabbitMqListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logging-api/src/main/java/com/example/loggingapi/messaging/RabbitMqListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +98,8 @@
       <workItem from="1638456544270" duration="21550000" />
       <workItem from="1638716033966" duration="14141000" />
       <workItem from="1638771925790" duration="5747000" />
+      <workItem from="1639760563079" duration="1295000" />
+      <workItem from="1639845865962" duration="1619000" />
     </task>
     <servers />
   </component>

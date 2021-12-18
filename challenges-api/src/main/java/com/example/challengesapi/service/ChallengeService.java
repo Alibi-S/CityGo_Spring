@@ -10,6 +10,7 @@ import com.example.challengesapi.model.Log;
 //import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
@@ -27,11 +28,23 @@ public class ChallengeService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    AmqpTemplate amqpTemplate;
+
+
     public void createLog(Long userId, String action, String description){
+//        Log log = new Log(userId, "ChallengeService", action, description);
+//        HttpEntity<Log> request = new HttpEntity<>(log);
+//        restTemplate.postForObject("http://logging-api/logs", request, Log.class);
+//        System.out.println(log.toString());
+
         Log log = new Log(userId, "ChallengeService", action, description);
-        HttpEntity<Log> request = new HttpEntity<>(log);
-        restTemplate.postForObject("http://logging-api/logs", request, Log.class);
+        //HttpEntity<Log> request = new HttpEntity<>(log);
+        //restTemplate.postForObject("http://logging-api/logs", request, Log.class);
         System.out.println(log.toString());
+        String logForAmqp = log.getUserId() + " " + log.getService() + " " + log.getAction() + " " + log.getDescription();
+        amqpTemplate.convertAndSend("queue1", logForAmqp);
+
     }
 
     public void createChallenge(Challenge challenge) {
@@ -81,7 +94,13 @@ public class ChallengeService {
 //    )
 
     @HystrixCommand(
-            fallbackMethod = "getChallengeDtoByIdFallback"
+            fallbackMethod = "getChallengeDtoByIdFallback",
+            threadPoolKey = "getChallengeDtoById",
+            threadPoolProperties = {
+                    @HystrixProperty(name = "coreSize", value="100"),
+                    @HystrixProperty(name = "maxQueueSize", value = "50"),
+            }
+
     )
     public ChallengeCompanyDTO getChallengeDtoById(Long id) {
         Optional<Challenge> challenge = challengeDAO.findById(id);

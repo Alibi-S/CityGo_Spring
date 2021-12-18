@@ -62,7 +62,7 @@ public class IndexController {
         ChallengeListDTO challengeListDTO = restTemplate.getForObject("http://zuul-service/challenges/dto", ChallengeListDTO.class);
         model.addAttribute("challenges", challengeListDTO.getChallengeList());
         return "challenges_admin";
-    }
+}
 
     @PostMapping("/admin_challenges")
     public String createChallenge(@ModelAttribute Challenge challenge, BindingResult bindingResult, Model model) {
@@ -71,6 +71,6 @@ public class IndexController {
         HttpEntity<Challenge> request = new HttpEntity<>(challenge);
         restTemplate.postForObject("http://zuul-service/challenges/register", request, Challenge.class);
 
-        return "adminpage";
+        return "redirect:adminpage";
     }
 }
