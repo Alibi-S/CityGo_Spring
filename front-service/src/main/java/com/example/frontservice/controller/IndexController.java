@@ -4,8 +4,10 @@ package com.example.frontservice.controller;
 import com.example.frontservice.model.Challenge;
 import com.example.frontservice.model.DTO.ChallengeListDTO;
 import com.example.frontservice.model.DTO.LogListDTO;
+import com.example.frontservice.model.DTO.PlaceListDTO;
 import com.example.frontservice.model.EmailMessage;
 
+import com.example.frontservice.model.Place;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Controller;
@@ -104,7 +106,32 @@ public class IndexController {
         //amqpTemplate.convertAndSend(emailMessage);
 
         return new RedirectView("/admin");//"redirect:/admin";
-
     }
+
+
+    //PLACE______________________________
+
+    @GetMapping("/admin_places")
+    public String placeAdmin(Model model) {
+        PlaceListDTO placeListDTO = restTemplate.getForObject("http://zuul-service/places/dto", PlaceListDTO.class);
+        for (Place p: placeListDTO.getPlaces()) {
+            System.out.println(p.toString());
+        }
+
+        model.addAttribute("places", placeListDTO.getPlaces());
+        return "places_admin";
+    }
+
+    @PostMapping("/admin_places")
+    public String createPlace(@ModelAttribute Place place, BindingResult bindingResult, Model model) {
+        System.out.println(place.toString());
+        HttpEntity<Place> request = new HttpEntity<>(place);
+        restTemplate.postForObject("http://zuul-service/places/create", request, Place.class);
+
+        return "redirect:adminpage";
+    }
+
+
+
 
 }
