@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/service/ChallengeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../challenges-api/src/main/java/com/example/challengesapi/service/ChallengeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/challenges_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/challenges_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/email_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guilds_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guilds_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/places_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/places_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/places_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/places_user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../guilds-api2/src/main/java/com/example/guildsapi2/controller/GuildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../guilds-api2/src/main/java/com/example/guildsapi2/controller/GuildController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../guilds-api2/src/main/java/com/example/guildsapi2/service/GuildService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../guilds-api2/src/main/java/com/example/guildsapi2/service/GuildService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,7 @@
       <workItem from="1639760563079" duration="1295000" />
       <workItem from="1639845865962" duration="2366000" />
       <workItem from="1640023600022" duration="4454000" />
-      <workItem from="1640028121083" duration="13258000" />
+      <workItem from="1640028121083" duration="13594000" />
     </task>
     <servers />
   </component>
