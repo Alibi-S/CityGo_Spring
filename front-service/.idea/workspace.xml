@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/challenges_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/challenges_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/email_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/guilds_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/guilds_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/places_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/places_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/places_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/places_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/controller/IndexController.class" afterDir="false" />
-    </list>
+    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +112,7 @@
       <workItem from="1639760563079" duration="1295000" />
       <workItem from="1639845865962" duration="2366000" />
       <workItem from="1640023600022" duration="4454000" />
-      <workItem from="1640028121083" duration="13594000" />
+      <workItem from="1640028121083" duration="14260000" />
     </task>
     <servers />
   </component>
