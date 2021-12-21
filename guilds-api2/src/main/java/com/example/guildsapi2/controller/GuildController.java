@@ -1,5 +1,6 @@
 package com.example.guildsapi2.controller;
 
+import com.example.guildsapi2.model.DTO.GuildListDTO;
 import com.example.guildsapi2.model.Guild;
 import com.example.guildsapi2.service.GuildService;
 import com.example.guildsapi2.model.Guild;
@@ -25,4 +26,11 @@ public class GuildController {
     public List<Guild> GetPlaces() {
         return guildService.GetGuilds();
     }
+
+    @GetMapping("/dto")
+    public GuildListDTO GetPlacesDto() {
+        return guildService.GetGuildsDto();
+    }
+
+
 }

@@ -83,16 +83,6 @@ public class ChallengeService {
         }
     }
 
-
-//    @HystrixCommand(
-//            fallbackMethod = "getChallengeDtoByIdFallback",
-//            threadPoolKey = "getChallengeDtoById",
-//            threadPoolProperties = {
-//                    @HystrixProperty(name = "core$size", value="100"),
-//                    @HystrixProperty(name = "maxQueueSize", value = "50"),
-//            }
-//    )
-
     @HystrixCommand(
             fallbackMethod = "getChallengeDtoByIdFallback",
             threadPoolKey = "getChallengeDtoById",
@@ -100,7 +90,6 @@ public class ChallengeService {
                     @HystrixProperty(name = "coreSize", value="100"),
                     @HystrixProperty(name = "maxQueueSize", value = "50"),
             }
-
     )
     public ChallengeCompanyDTO getChallengeDtoById(Long id) {
         Optional<Challenge> challenge = challengeDAO.findById(id);

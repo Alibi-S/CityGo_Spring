@@ -3,10 +3,12 @@ package com.example.frontservice.controller;
 
 import com.example.frontservice.model.Challenge;
 import com.example.frontservice.model.DTO.ChallengeListDTO;
+import com.example.frontservice.model.DTO.GuildListDTO;
 import com.example.frontservice.model.DTO.LogListDTO;
 import com.example.frontservice.model.DTO.PlaceListDTO;
 import com.example.frontservice.model.EmailMessage;
 
+import com.example.frontservice.model.Guild;
 import com.example.frontservice.model.Place;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -25,18 +27,8 @@ public class IndexController {
     @Autowired
     private RestTemplate restTemplate;
 
-
-//    @Autowired
-//    AmqpTemplate amqpTemplate;
-//    @Autowired
-//    private MessageRepo messageRepo;
-
     @GetMapping("/")
-    //   public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Map<String, Object> model/*Model model*/) {
     public String greeting(Map<String, Object> model/*Model model*/) {
-
-        //model.addAttribute("name", name);
-        //model.put("name", name);
         return "main";
     }
 
@@ -52,23 +44,10 @@ public class IndexController {
 
     @GetMapping("/admin")
     public String admin(Model model) {
-//        LogListDTO logList = restTemplate.getForObject("http://logging-api/logs/dto", LogListDTO.class);
         LogListDTO logList = restTemplate.getForObject("http://zuul-service/logs/dto", LogListDTO.class);
         System.out.println(logList.getLogs().toString());
         model.addAttribute("logs", logList.getLogs());
-
-//
-//        EmailMessage emailMessage = new EmailMessage("alibisemeikhan@yandex.kz", "Subject", "Text");
-//
-//        HttpEntity<Challenge> request = new HttpEntity<>(emailMessage);
-//        restTemplate.postForObject("http://zuul-service/challenges/register", request, Challenge.class);
-//
-//
-//        System.out.println("\nTEST------------------------------" +
-//                "\n__+_+_+_+_+_+_+_+_+_+\n" + emailMessage.toString());
-//
-
-        return "adminpage";
+       return "adminpage";
     }
 
     @GetMapping("/admin_challenges")
@@ -85,7 +64,7 @@ public class IndexController {
         HttpEntity<Challenge> request = new HttpEntity<>(challenge);
         restTemplate.postForObject("http://zuul-service/challenges/register", request, Challenge.class);
 
-        return "redirect:adminpage";
+        return "redirect:/";
     }
 
 
@@ -108,9 +87,6 @@ public class IndexController {
         return new RedirectView("/admin");//"redirect:/admin";
     }
 
-
-    //PLACE______________________________
-
     @GetMapping("/admin_places")
     public String placeAdmin(Model model) {
         PlaceListDTO placeListDTO = restTemplate.getForObject("http://zuul-service/places/dto", PlaceListDTO.class);
@@ -122,16 +98,49 @@ public class IndexController {
         return "places_admin";
     }
 
+    @GetMapping("/places_create")
+    public String placeUser(Model model) {
+        return "places_user";
+    }
+
+    @PostMapping("/places_create")
+    public String createPlaceUser(@ModelAttribute Place place, BindingResult bindingResult, Model model) {
+        System.out.println(place.toString());
+        HttpEntity<Place> request = new HttpEntity<>(place);
+        restTemplate.postForObject("http://zuul-service/places/create", request, Place.class);
+
+        return "redirect:/";
+    }
+
+
     @PostMapping("/admin_places")
     public String createPlace(@ModelAttribute Place place, BindingResult bindingResult, Model model) {
         System.out.println(place.toString());
         HttpEntity<Place> request = new HttpEntity<>(place);
         restTemplate.postForObject("http://zuul-service/places/create", request, Place.class);
 
-        return "redirect:adminpage";
+        return "redirect:/";
     }
 
+    @GetMapping("/admin_guilds")
+    public String guildAdmin(Model model) {
+        GuildListDTO guildListDTO = restTemplate.getForObject("http://zuul-service/guilds/dto", GuildListDTO.class);
+        for (Guild guild: guildListDTO.getGuilds()) {
+            System.out.println(guild.toString());
+        }
 
+        model.addAttribute("guilds", guildListDTO.getGuilds());
+        return "guilds_admin";
+    }
+
+    @PostMapping("/admin_guilds")
+    public String createGuild(@ModelAttribute Guild guild, BindingResult bindingResult, Model model) {
+        System.out.println(guild.toString());
+        HttpEntity<Guild> request = new HttpEntity<>(guild);
+        restTemplate.postForObject("http://zuul-service/guilds/create", request, Guild.class);
+
+        return "redirect:/";
+    }
 
 
 }

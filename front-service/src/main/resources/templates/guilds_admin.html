@@ -190,28 +190,43 @@
     </div>
 
     <div class="container">
-        <h2>Create challenge</h2>
-        <form class="row gx-3 gy-2 align-items-center" th:action="@{admin_email}" th:object="${emailMessage}" method="post">
+        <h2>Create Guild</h2>
+        <form class="row gx-3 gy-2 align-items-center" th:action="@{admin_guild}" th:object="${guild}" method="post">
             <div class="col-sm-6">
-                <label class="visually-hidden" for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="to" placeholder="email@mail.kz">
+                <label class="visually-hidden" for="name">Name</label>
+                <input type="email" class="form-control" id="name" name="name" placeholder="">
             </div>
             <div class="col-sm-6">
-                <label class="visually-hidden" for="subject">Subject</label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-            </div>
-            <div class="col-sm-4">
-                <label class="visually-hidden" for="text">Message</label>
-                <input type="text" class="form-control" id="text" name="text" placeholder="Hello, user!">
+                <label class="visually-hidden" for="description">Description</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="">
             </div>
             <div class="col-sm-3">
                 <label class="visually-hidden" for="sbmt"/>
                 <button type="submit" id="sbmt" class="btn btn-primary">Submit</button>
             </div>
         </form>
-
     </div>
 
+    <div class="container">
+        <h2>Places table</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ch, state : ${guilds}"
+                class="" th:classappend="${state.odd} ? 'odd-row' : 'even-row'">
+                <th th:utext="${ch.id}" scope="row"/>
+                <td th:utext="${ch.name}"/>
+                <td th:utext="${ch.description}"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
     <section class="footer bg-primary" id="footer">
         <div class="container">
