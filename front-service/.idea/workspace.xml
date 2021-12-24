@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="" />
+    <list default="true" id="dafea998-89a4-4a28-bbc7-1bfe31e7deb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frontservice/config/ResourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frontservice/config/ResourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/frontservice/config/ResourceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/frontservice/config/ResourceConfig.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,6 +119,7 @@
       <workItem from="1639845865962" duration="2366000" />
       <workItem from="1640023600022" duration="4454000" />
       <workItem from="1640028121083" duration="14260000" />
+      <workItem from="1640367104458" duration="6706000" />
     </task>
     <servers />
   </component>
